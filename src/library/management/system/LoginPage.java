@@ -4,6 +4,13 @@
  */
 package library.management.system;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
+
 /**
  *
  * @author naman
@@ -111,6 +118,32 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        String url = "jdbc:mysql://localhost:3306/library?useSSL=false";
+        String mysqluser = "root";
+        String mysqlpswd = "Nayan_0403@";
+        String pswd = new String( password.getPassword());
+        String username = username1.getText();
+        String query = ("SELECT PASSWORD FROM ADMIN WHERE USER_ID ='"+username+"';");
+        try{
+            Connection conn = DriverManager.getConnection(url , mysqluser , mysqlpswd);
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+            
+            if(rs.next()){
+                String realpswd = rs.getString("PASSWORD");
+                if(realpswd.equals(pswd)){
+                    Dashboard dsh = new Dashboard();
+                    dsh.setVisible(true);
+                    this.dispose();
+                }else{
+                    JOptionPane.showMessageDialog(this , "username or password entered are incorrect");
+                }
+            }else{
+                JOptionPane.showMessageDialog(this , "Wrong username");
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this , e.getMessage());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
