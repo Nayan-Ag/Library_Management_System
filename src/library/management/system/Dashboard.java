@@ -141,6 +141,9 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
         // TODO add your handling code here:
+        RemoveStaff rst = new RemoveStaff();
+        rst.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
@@ -159,6 +162,9 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         // TODO add your handling code here:
+        RemoveBook rb = new RemoveBook();
+        rb.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
