@@ -133,6 +133,7 @@ public class RemoveBook extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(this , "No Such Books Exist");
             }
+            t1.setText(null);
             stmt.close();
         }catch(Exception e){
             JOptionPane.showMessageDialog(this , e.getMessage());

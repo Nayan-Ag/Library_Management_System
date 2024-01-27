@@ -183,6 +183,9 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
         // TODO add your handling code here:
+        EditAdmin ea = new EditAdmin();
+        ea.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_b7ActionPerformed
 
     /**
