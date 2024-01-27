@@ -22,7 +22,9 @@ public class StaffDetails extends javax.swing.JFrame {
      */
     public StaffDetails() {
         initComponents();
-        setDefaultCloseOperation(StaffDetails.DISPOSE_ON_CLOSE);
+        
+        // Below Line is used to not terminate the program when we dispose it instead just close that window.
+//        setDefaultCloseOperation(StaffDetails.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -123,8 +125,8 @@ public class StaffDetails extends javax.swing.JFrame {
 
     private void EXITActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EXITActionPerformed
         // TODO add your handling code here:
-//        Dashboard dsh = new Dashboard();
-//        dsh.setVisible(true);
+        Dashboard dsh = new Dashboard();
+        dsh.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_EXITActionPerformed
 
