@@ -160,6 +160,9 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
         // TODO add your handling code here:
+        StaffDetails sd = new StaffDetails();
+        sd.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_b4ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
